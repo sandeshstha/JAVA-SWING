@@ -1,0 +1,24 @@
+1. Container
+	-Panel
+		--Applet
+			---JApplet
+	-window
+		--Frame
+			---JFrame
+		--Dialog
+			---JDialog
+	-JComponet
+		--JLabel
+		--JButton
+		--JPanel
+2. Awt Components
+
+
+Swing's Top Level Container
+1.JFrame(contains icon,title,maximize/minimize/close button, optional MenuBar, and content-pane)
+2.JApplet
+
+3.JDialog(title,close button, a content-pane)
+
+***
+JComponents must be added onto the so-called content-pane of the top-level container. Content-pane is in fact a java.awt.Container that can be used to group and layout components.
