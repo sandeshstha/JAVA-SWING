@@ -1,0 +1,11 @@
+Writing Swing Application
+1. Use the Swing components with prefix "J" in package javax.swing, e.g., JFrame, JButton, JTextField, JLabel, etc.
+2. A top-level container (typically JFrame) is needed. The JComponents should not be added directly onto the top-level container. They shall be added onto the content-pane of the top-level container. You can retrieve a reference to the content-pane by invoking method getContentPane() from the top-level container.
+3. Swing applications uses AWT event-handling classes, e.g., ActionEvent/ActionListener, MouseEvent/MouseListener, etc.
+3. Run the constructor in the Event Dispatcher Thread (instead of Main thread) for thread safety, as shown in the following program template.
+Run the GUI code in Event Dispatching thread for the thread safety.
+
+invoking the constructor directly in the main method to set up GUI componets may cause multithreading issues like unresponsive UI and deadlock.
+so it is recommended to execute the GUI setup code in the event dispatching thread instead of main() 
+for this Static method SwingUtilities.invokeLater()
+-helps to asynchronously queue the constructor on the event-dispatching thread. The codes will be run after all pending events have been processed.
